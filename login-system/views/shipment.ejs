@@ -1,0 +1,26 @@
+<h1>Register</h1>
+<%- include ('./partials/messages') %>
+<button onClick="get_data()">Update</button>
+<div id="data">
+  <li>
+    <ol></ol>
+  </li>
+</div>
+
+
+<script type="text/javascript">
+  const server = "http://127.0.0.1:3000"  // either 3000 for nodejs or 8000 for fastapi
+
+  function get_data() {
+      // Get data from the REST API - could be node.js, python... or anything else...
+      axios.get(server + '/shipments')
+      .then(resp => {                
+          // Get the element where to add the graph
+          element = document.getElementById("data");
+          element.innerHTML = JSON.stringify(resp.data);
+      })
+      .catch(function (error) {
+          console.log(error);
+      });
+  }
+</script>

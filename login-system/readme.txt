@@ -1,8 +1,7 @@
-https://betterprogramming.pub/build-a-login-system-in-node-js-f1ba2abd19a
 
-https://github.com/HussainArif12/UserAuthentication-In-JavaScript
 
-start from User Authentication with passport
+
+
 
 #Modules
 npm i express express-session express-ejs-layouts connect-flash passport passport-local mongoose bcrypt ejs
